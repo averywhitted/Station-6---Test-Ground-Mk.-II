@@ -36,36 +36,34 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\UIHelper.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
      <Compile Include="Assets\Skyboxes\SkyboxEarthPlanets\script\skyboxspace_mouselook_v1.cs" />
+     <Compile Include="Assets\Scripts\Player State Machine\PlayerBaseState.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\Skyboxes\SkyboxEarthPlanets\script\skyboxspace_demo_v1.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
+     <Compile Include="Assets\Scripts\Player State Machine\PlayerStateManager.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
      <Compile Include="Assets\Sci Fi Modular Pack\Scripts\CameraController.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Player State Machine\PlayerGravityState.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
+     <Compile Include="Assets\Scripts\Player State Machine\PlayerZeroGravityState.cs" />
      <Compile Include="Assets\PlayerControls.cs" />
+     <Compile Include="Assets\Scripts\InputManager.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Scripts\DebrisObject.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Scripts\Player State Machine\PlayerZeroGravityState.cs" />
-     <Compile Include="Assets\Scripts\UIHelper.cs" />
-     <Compile Include="Assets\Scripts\Player State Machine\PlayerGravityState.cs" />
-     <Compile Include="Assets\Scripts\RoomTemplates.cs" />
-     <Compile Include="Assets\Scripts\Player State Machine\PlayerStateManager.cs" />
-     <Compile Include="Assets\Scripts\Player State Machine\PlayerBaseState.cs" />
-     <Compile Include="Assets\Scripts\RoomSpawner.cs" />
-     <Compile Include="Assets\Scripts\DebrisObject.cs" />
-     <Compile Include="Assets\Scripts\InputManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
