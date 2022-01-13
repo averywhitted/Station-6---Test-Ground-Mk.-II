@@ -47,6 +47,7 @@
      <Compile Include="Assets\Skyboxes\SkyboxEarthPlanets\script\skyboxspace_demo_v1.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Scripts\Radar.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\Scripts\Player State Machine\PlayerStateManager.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -64,6 +65,11 @@
      <Compile Include="Assets\Scripts\DebrisObject.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Scripts\Debris Metadata\LargeDebrisObject.cs" />
+     <Compile Include="Assets\Scripts\Debris Metadata\MediumDebrisObject.cs" />
+     <Compile Include="Assets\Scripts\Debris Metadata\SmallDebrisObject.cs" />
+     <Compile Include="Assets\Scripts\ObjectSelector.cs" />
+     <Compile Include="Assets\Scripts\ObjectTooltip.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

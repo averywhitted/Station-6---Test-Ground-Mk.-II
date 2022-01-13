@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - Closed Room
   - PlayerCamera
+  - DebrisObject
   layers:
   - Default
   - TransparentFX

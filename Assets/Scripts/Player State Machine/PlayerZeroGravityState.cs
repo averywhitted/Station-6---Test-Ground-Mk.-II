@@ -43,7 +43,7 @@ public class PlayerZeroGravityState : PlayerBaseState
 
         ///////////MOUSE LOOK CONTROLS///////////
         mouseSensitivityX = inputManager.mouseSensitivityX;
-        mouseSensitivityY = inputManager.mouseSensitivityY * 0.01f;
+        mouseSensitivityY = inputManager.mouseSensitivityY;
         verticalClamp = inputManager.verticalClamp;
 
         ////////////////SETUP//////////////////
@@ -78,7 +78,7 @@ public class PlayerZeroGravityState : PlayerBaseState
         Vector3 playerRight = Vector3.right;
 
         player.transform.Rotate(playerUp, mousePosition.x * mouseSensitivityX * Time.deltaTime);
-        player.transform.Rotate(playerRight, mousePosition.y * mouseSensitivityY * Time.deltaTime);
+        player.transform.Rotate(playerRight, -mousePosition.y * mouseSensitivityY * Time.deltaTime);
 
         /*
         xRotation -= mousePosition.y * mouseSensitivityY;
