@@ -36,7 +36,16 @@ public class UIHelper : MonoBehaviour
         //Get object metadata as text.
             string objectName = obj.name;
             string objectPosition = obj.transform.position.ToString();
+            string objectHydrogen = obj.GetComponent<DebrisObject>().metadata.hydrogen.ToString();
+            string objectHelium = obj.GetComponent<DebrisObject>().metadata.helium.ToString();
+            string objectOxygen = obj.GetComponent<DebrisObject>().metadata.oxygen.ToString();
+            string objectCarbon = obj.GetComponent<DebrisObject>().metadata.carbon.ToString();
             
-            return objectName + "\n" + objectPosition;
+            return objectName + "\n" + 
+            objectPosition + "\n" + "\n" +
+            "H: " + objectHydrogen + "\n" +
+            "He: " + objectHelium + "\n" +
+            "O: " + objectOxygen + "\n" +
+            "C: " + objectCarbon;
     }
 }

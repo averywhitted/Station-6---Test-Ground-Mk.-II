@@ -10,14 +10,31 @@ public class DebrisObject : MonoBehaviour
     public float startForceRange;
     public float posRange;
     public float scaleRange;
-
     public Vector3 startHeading;
-
     public Vector3 startRotation;
+
+    public List<DebrisObjectMetadata> metadataOptions;
+
+    [Space (20)]
+
+    public DebrisObjectMetadata metadata;
+
+    [SerializeField]
+     int hydrogen;
+     [SerializeField]
+     int helium;
+     [SerializeField]
+     int oxygen;
+     [SerializeField]
+     int carbon;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
+        metadata = metadataOptions[Random.Range(0, metadataOptions.Count)];
+
+        SetupObject();
     }
     private void Start()
     {
@@ -40,5 +57,17 @@ public class DebrisObject : MonoBehaviour
         float randomNumber = Random.Range(0.25f, scaleRange);
         Vector3 randomScale = new Vector3(randomNumber, randomNumber, randomNumber);
         transform.localScale += randomScale;
+    }
+
+    public void SetupObject()
+    {
+        name = metadata.name;
+        hydrogen = metadata.hydrogen;
+        helium = metadata.helium;
+        oxygen = metadata.oxygen;
+        carbon = metadata.carbon;
+        GetComponent<MeshFilter>().mesh = metadata.mesh;
+        GetComponent<MeshRenderer>().material = metadata.material;
+        GetComponent<MeshCollider>().sharedMesh = metadata.mesh;
     }
 }

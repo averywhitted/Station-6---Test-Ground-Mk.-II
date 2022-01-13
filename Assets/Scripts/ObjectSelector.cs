@@ -7,10 +7,13 @@ public class ObjectSelector : MonoBehaviour
     public UIHelper uiHelper;
 
     public Camera playerCamera;
+
+    public Radar radar;
+    public float radarRange;
     // Start is called before the first frame update
     void Start()
     {
-
+        radarRange = radar.radarRange;
     }
 
     // Update is called once per frame
@@ -18,7 +21,7 @@ public class ObjectSelector : MonoBehaviour
     {
         RaycastHit hit;
         Ray cameraRay = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        if(Physics.Raycast(cameraRay, out hit, 50f))
+        if(Physics.Raycast(cameraRay, out hit, radarRange))
         {
             if(hit.collider.tag == "DebrisObject")
             {
