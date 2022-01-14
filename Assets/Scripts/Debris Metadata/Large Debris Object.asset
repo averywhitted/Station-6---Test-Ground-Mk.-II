@@ -18,4 +18,4 @@ MonoBehaviour:
   oxygen: 5
   carbon: 7
   mesh: {fileID: 4300006, guid: 234c5d0c3948549bd9657592e4d58471, type: 3}
-  material: {fileID: 2100000, guid: 6f36a222811073946936cf1cdeb78f9c, type: 2}
+  material: {fileID: 2100000, guid: 82096aab38f01cb40a1cbf8629a810ba, type: 2}

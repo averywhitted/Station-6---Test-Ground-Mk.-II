@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\ObjectSelector.cs" />
      <Compile Include="Assets\Scripts\Player State Machine\PlayerStateManager.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
      <Compile Include="Assets\Sci Fi Modular Pack\Scripts\CameraController.cs" />
      <Compile Include="Assets\DOTween_1_2_632\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
@@ -74,6 +73,7 @@
      <Compile Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Demo Scene\Scripts\SENBDLCameraAnimation.cs" />
      <Compile Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Scripts\SENaturalBloomAndDirtyLens.cs" />
      <Compile Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Demo Scene\Scripts\SENBDLMainCube.cs" />
+     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Shaders\SEParticlesAdditive.shader" />
@@ -81,6 +81,7 @@
      <None Include="Assets\DOTween_1_2_632\DOTween\readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Skyboxes\SkyboxEarthPlanets\readme.txt" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
      <None Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Shaders\SENaturalBloomAndDirtyLens.shader" />
@@ -92,12 +93,14 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\QuickOutline\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Shaders\SEEmissiveTextured.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

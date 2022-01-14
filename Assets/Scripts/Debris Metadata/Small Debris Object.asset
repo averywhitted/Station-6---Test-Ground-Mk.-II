@@ -17,5 +17,5 @@ MonoBehaviour:
   helium: 2
   oxygen: 0
   carbon: 5
-  mesh: {fileID: 4300000, guid: c924ef99340de7745b29d4e6e087d0cd, type: 2}
-  material: {fileID: 2100000, guid: 2facb0be88fb8d14aaaeea8da01ac3b1, type: 2}
+  mesh: {fileID: 4300004, guid: 959be6347b65b7a4c9baa6bc323541fd, type: 3}
+  material: {fileID: 2100000, guid: 873a5582473d00d40bba2b172e746026, type: 2}

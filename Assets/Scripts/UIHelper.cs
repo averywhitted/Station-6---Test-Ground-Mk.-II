@@ -11,6 +11,7 @@ public class UIHelper : MonoBehaviour
     public string currentObjectText;
     public TMP_Text currentObject;
     public GameObject focusObject;
+    public TMP_Text objectsInRange;
 
      Radar radar;
 
@@ -23,12 +24,7 @@ public class UIHelper : MonoBehaviour
     private void Update()
     {
         currentObject.text = currentObjectText;
-
-        for (int i = 0; i < radar.objectsInRange.Count; i++)
-        {
-            //Dynamically list objects in range on HUD
-            //radar.objectsInRange[i].name
-        }
+        objectsInRange.text = StringListToString(radar.objectsInRangeNames);
     }
 
     public string ShowObjectMetadata(GameObject obj)
@@ -48,4 +44,11 @@ public class UIHelper : MonoBehaviour
             "O: " + objectOxygen + "\n" +
             "C: " + objectCarbon;
     }
+
+    public string StringListToString(List<string> list)
+    {
+        string result = string.Join("\n", list);
+        return result;
+    }
+
 }

@@ -6,6 +6,7 @@ public class Radar : MonoBehaviour
 {
     public GameObject[] allDebrisObjects;
     public List<GameObject> objectsInRange;
+    public List<string> objectsInRangeNames;
     public float radarRange;
     public SphereCollider sphereCollider;
 
@@ -28,6 +29,7 @@ public class Radar : MonoBehaviour
         if(other.gameObject.CompareTag("DebrisObject"))
         {
             objectsInRange.Add(other.gameObject);
+            objectsInRangeNames.Add(other.name);
             Debug.Log(other.gameObject.name + " - Added");
         }
     }
@@ -37,8 +39,8 @@ public class Radar : MonoBehaviour
         if(other.gameObject.CompareTag("DebrisObject"))
         {
             objectsInRange.Remove(other.gameObject);
+            objectsInRangeNames.Remove(other.name);
             Debug.Log(other.gameObject.name + " - Removed");
         }
     }
-
 }
