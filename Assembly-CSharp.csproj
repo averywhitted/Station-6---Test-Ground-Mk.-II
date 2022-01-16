@@ -74,6 +74,9 @@
      <Compile Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Scripts\SENaturalBloomAndDirtyLens.cs" />
      <Compile Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Demo Scene\Scripts\SENBDLMainCube.cs" />
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Scripts\FPSCounter.cs" />
+     <Compile Include="Assets\Scripts\Location.cs" />
+     <Compile Include="Assets\Scripts\Teleport.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\SE-Natural-Bloom-Dirty-Lens-master\Assets\SE Natural Bloom\Shaders\SEParticlesAdditive.shader" />

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304294cb473c7b44686c93bdfcb52ea7, type: 3}
+  m_Name: Wall
+  m_EditorClassIdentifier: 
+  name: Large Debris Object
+  hydrogen: 4
+  helium: 4
+  oxygen: 5
+  carbon: 7
+  mesh: {fileID: 4300000, guid: e7b2394064b434dcd8acf90528275285, type: 3}
+  material: {fileID: 2100000, guid: da36230c61a154acba2fe3f81813150a, type: 2}

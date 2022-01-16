@@ -30,7 +30,6 @@ public class Radar : MonoBehaviour
         {
             objectsInRange.Add(other.gameObject);
             objectsInRangeNames.Add(other.name);
-            Debug.Log(other.gameObject.name + " - Added");
         }
     }
 
@@ -40,7 +39,6 @@ public class Radar : MonoBehaviour
         {
             objectsInRange.Remove(other.gameObject);
             objectsInRangeNames.Remove(other.name);
-            Debug.Log(other.gameObject.name + " - Removed");
         }
     }
 }

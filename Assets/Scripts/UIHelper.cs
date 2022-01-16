@@ -6,27 +6,42 @@ using UnityEngine.UI;
 
 public class UIHelper : MonoBehaviour
 {
+    //Gravity Indicator
     public Image gravityOnImage;
     public Image gravityOffImage;
-    public string currentObjectText;
-    public TMP_Text currentObject;
-    public GameObject focusObject;
-    public TMP_Text objectsInRange;
 
-     Radar radar;
+    //Object Tracking
+    Radar radar;
+    public TMP_Text objectsInRange;
+    public GameObject focusObject;
+    public string noObjectMessage;
+    public TMP_Text currentObject;
+    public TMP_Text currentObjectHydrogen;
+    public TMP_Text currentObjectHelium;
+    public TMP_Text currentObjectCarbon;
+    public TMP_Text currentObjectOxygen;
+    
+
+    //FPS Counter
+    public TMP_Text fpsCounter;
+    public FPSCounter fpsCounterScript;
 
     private void Start()
     {
         radar = GameObject.Find("Radar").GetComponent<Radar>();
-        currentObject.text = currentObjectText;
+        currentObject.text = noObjectMessage;
     }
 
     private void Update()
     {
-        currentObject.text = currentObjectText;
-        objectsInRange.text = StringListToString(radar.objectsInRangeNames);
+        objectsInRange.text = ListToString(radar.objectsInRangeNames);
+
+        GetObjectInfo(focusObject);
+        //FPS Counter
+        fpsCounter.text = FPSCounter(fpsCounterScript.m_lastFramerate);
     }
 
+/*
     public string ShowObjectMetadata(GameObject obj)
     {
         //Get object metadata as text.
@@ -44,11 +59,37 @@ public class UIHelper : MonoBehaviour
             "O: " + objectOxygen + "\n" +
             "C: " + objectCarbon;
     }
+    */
 
-    public string StringListToString(List<string> list)
+
+///Object Tracking Getter Functions
+    public void GetObjectInfo(GameObject obj)
+    {
+        DebrisObject debrisObejct = obj.GetComponent<DebrisObject>();
+
+        currentObject.text = debrisObejct.name;
+        currentObjectHydrogen.text = debrisObejct.hydrogen.ToString();
+        currentObjectHelium.text = debrisObejct.helium.ToString();
+        currentObjectCarbon.text = debrisObejct.carbon.ToString();
+        currentObjectOxygen.text = debrisObejct.oxygen.ToString();
+    }
+
+
+///HELPER FUNCTIONS///
+
+    public string ListToString(List<string> list)
     {
         string result = string.Join("\n", list);
         return result;
+    }
+
+
+///FPS COUNTER///
+    public string FPSCounter(float fps)
+    {
+        string fpsString = fps.ToString();
+
+        return fpsString;
     }
 
 }

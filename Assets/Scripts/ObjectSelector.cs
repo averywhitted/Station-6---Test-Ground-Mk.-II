@@ -25,17 +25,16 @@ public class ObjectSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //RaycastHit hit;
-        //Ray cameraRay = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        //if(Physics.Raycast(cameraRay, out hit, radarRange))
-        //{
-        //    if(hit.collider.tag == "DebrisObject")
-        //    {
-        //        HighlightObject(hit.collider.gameObject, highlightColor);
-        //        uiHelper.currentObjectText = uiHelper.ShowObjectMetadata(hit.collider.gameObject);
-        //        uiHelper.focusObject = hit.collider.gameObject;
-        //    }
-        //}
+        RaycastHit hit;
+        Ray cameraRay = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        if(Physics.Raycast(cameraRay, out hit, radarRange))
+        {
+            if(hit.collider.tag == "DebrisObject")
+            {
+                HighlightObject(hit.collider.gameObject, highlightColor);
+                uiHelper.focusObject = hit.collider.gameObject;
+            }
+        }
     }
 
    public void HighlightObject(GameObject obj, Color color)
@@ -62,4 +61,5 @@ public class ObjectSelector : MonoBehaviour
        return list.ToString();
    }
 }
+
 

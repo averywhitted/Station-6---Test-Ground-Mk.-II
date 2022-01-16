@@ -19,14 +19,14 @@ public class DebrisObject : MonoBehaviour
 
     public DebrisObjectMetadata metadata;
 
-    [SerializeField]
-     int hydrogen;
-     [SerializeField]
-     int helium;
-     [SerializeField]
-     int oxygen;
-     [SerializeField]
-     int carbon;
+    
+     public int hydrogen;
+     
+     public int helium;
+     
+     public int oxygen;
+     
+     public int carbon;
 
     private void Awake()
     {
