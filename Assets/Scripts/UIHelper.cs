@@ -36,7 +36,10 @@ public class UIHelper : MonoBehaviour
     {
         objectsInRange.text = ListToString(radar.objectsInRangeNames);
 
-        GetObjectInfo(focusObject);
+        if(focusObject != null)
+        {
+            GetObjectInfo(focusObject);
+        }
         //FPS Counter
         fpsCounter.text = FPSCounter(fpsCounterScript.m_lastFramerate);
     }

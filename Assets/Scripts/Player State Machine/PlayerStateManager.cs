@@ -22,6 +22,11 @@ public class PlayerStateManager : MonoBehaviour
         currentState.UpdateState(this);
     }
 
+    void FixedUpdate()
+    {
+        currentState.FixedUpdateState(this);
+    }
+
     public void SwitchState(PlayerBaseState state)
     {
         currentState = state;

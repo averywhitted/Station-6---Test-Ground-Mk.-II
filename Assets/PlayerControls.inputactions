@@ -11,7 +11,8 @@
                     "id": "92f49703-21db-499a-a492-f71bf9bb865a",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",
@@ -19,7 +20,8 @@
                     "id": "b5994dc4-8259-49b1-9db1-b56d345cf215",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ZeroGMovement",
@@ -27,7 +29,8 @@
                     "id": "8ee0793e-3005-407a-a98a-8fef73fa1611",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "ZeroGUpDown",
@@ -35,7 +38,8 @@
                     "id": "bb12ceeb-a822-452c-86ed-a65499705e15",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "GravitySwitch",
@@ -43,7 +47,8 @@
                     "id": "f25f1721-9be6-4447-8b36-e0d3be3ab209",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "ZeroGRoll",
@@ -51,7 +56,8 @@
                     "id": "3949f7fc-f165-49ed-9e30-824a47dc81f7",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MouseX",
@@ -59,7 +65,8 @@
                     "id": "a3edd1cb-4a3e-4977-9ecb-87ded3afe045",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MouseY",
@@ -67,7 +74,17 @@
                     "id": "8ea51f8d-d199-4314-a799-ab5281c686a1",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AlignToTarget",
+                    "type": "Button",
+                    "id": "8e116201-03cf-4ebe-8e3c-227a0eab8ad6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -497,6 +514,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "07bd6cb6-ddc9-452a-ac10-f7cc041f0873",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlignToTarget",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

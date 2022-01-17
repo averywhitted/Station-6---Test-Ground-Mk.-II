@@ -31,7 +31,7 @@ public class PlayerGravityState : PlayerBaseState
 
     public override void EnterState(PlayerStateManager _player)
     {
-        Debug.Log("GRAVITY ON");
+        //Debug.Log("GRAVITY ON");
 
         ///////////////COMMON//////////////////
         player = GameObject.FindGameObjectWithTag("Player");
@@ -56,6 +56,10 @@ public class PlayerGravityState : PlayerBaseState
         UIHelper.gravityOffImage.color = Color.clear;
     }
 
+    public override void FixedUpdateState(PlayerStateManager _player)
+    {
+        //Nothing to see here!
+    }
     public override void UpdateState(PlayerStateManager _player)
     {
         
@@ -97,7 +101,7 @@ public class PlayerGravityState : PlayerBaseState
             Sequence seq = DOTween.Sequence();
             seq.AppendCallback(() => _player.SwitchState(_player.zeroGravityState));
             seq.AppendCallback(() => player.GetComponent<CharacterController>().enabled = false);
-            Debug.Log("GRAVITY OFF");
+            //Debug.Log("GRAVITY OFF");
         }
         
     }

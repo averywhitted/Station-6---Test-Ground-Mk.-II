@@ -1,0 +1,4 @@
+repository "Station 6 - Test Ground Mk. II@AdventureSociety@cloud"
+  path "/"
+    br "/main"
+    co "/main"

@@ -20,6 +20,7 @@ public class InputManager : MonoBehaviour
     public float mouseSensitivityX = 8f;
     public float mouseSensitivityY = 0.5f;
     public float verticalClamp = 85f;
+    public float thrust;
 
 
 
@@ -91,15 +92,19 @@ public class InputManager : MonoBehaviour
     //GRAVITY
     public bool GetGravity()
     {
-        if(playerControls.Player.GravitySwitch.ReadValue<float>() > 0.5f)
+        if(playerControls.Player.GravitySwitch.ReadValue<float>() >= 0.5f)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        else return false;
     }
-    
 
+    public bool GetAlignToTarget()
+    {
+        if(playerControls.Player.AlignToTarget.ReadValue<float>() >= 0.5f)
+        {
+            return true;
+        }
+        else return false;
+    }
 }

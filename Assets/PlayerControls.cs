@@ -98,6 +98,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AlignToTarget"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e116201-03cf-4ebe-8e3c-227a0eab8ad6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -529,6 +538,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""MouseY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""07bd6cb6-ddc9-452a-ac10-f7cc041f0873"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AlignToTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -545,6 +565,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_ZeroGRoll = m_Player.FindAction("ZeroGRoll", throwIfNotFound: true);
         m_Player_MouseX = m_Player.FindAction("MouseX", throwIfNotFound: true);
         m_Player_MouseY = m_Player.FindAction("MouseY", throwIfNotFound: true);
+        m_Player_AlignToTarget = m_Player.FindAction("AlignToTarget", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -612,6 +633,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ZeroGRoll;
     private readonly InputAction m_Player_MouseX;
     private readonly InputAction m_Player_MouseY;
+    private readonly InputAction m_Player_AlignToTarget;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -624,6 +646,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @ZeroGRoll => m_Wrapper.m_Player_ZeroGRoll;
         public InputAction @MouseX => m_Wrapper.m_Player_MouseX;
         public InputAction @MouseY => m_Wrapper.m_Player_MouseY;
+        public InputAction @AlignToTarget => m_Wrapper.m_Player_AlignToTarget;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -657,6 +680,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @MouseY.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
                 @MouseY.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
                 @MouseY.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseY;
+                @AlignToTarget.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAlignToTarget;
+                @AlignToTarget.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAlignToTarget;
+                @AlignToTarget.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAlignToTarget;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -685,6 +711,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @MouseY.started += instance.OnMouseY;
                 @MouseY.performed += instance.OnMouseY;
                 @MouseY.canceled += instance.OnMouseY;
+                @AlignToTarget.started += instance.OnAlignToTarget;
+                @AlignToTarget.performed += instance.OnAlignToTarget;
+                @AlignToTarget.canceled += instance.OnAlignToTarget;
             }
         }
     }
@@ -699,5 +728,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnZeroGRoll(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
+        void OnAlignToTarget(InputAction.CallbackContext context);
     }
 }

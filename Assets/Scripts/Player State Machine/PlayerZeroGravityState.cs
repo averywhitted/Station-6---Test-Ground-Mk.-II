@@ -23,11 +23,10 @@ public class PlayerZeroGravityState : PlayerBaseState
     float mouseSensitivityY;
     Vector2 mousePosition;
     float verticalClamp;
-    float xRotation = 0;
 
     public override void EnterState(PlayerStateManager _player)
     {
-        Debug.Log("GRAVITY OFF");
+        //Debug.Log("GRAVITY OFF");
 
         ///////////////COMMON//////////////////
         player = GameObject.FindGameObjectWithTag("Player");
@@ -40,6 +39,7 @@ public class PlayerZeroGravityState : PlayerBaseState
         rb = player.gameObject.GetComponent<Rigidbody>();
         playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera").GetComponent<Camera>();
         playerCameraTransform = playerCamera.transform;
+        thrust = inputManager.thrust;
 
         ///////////MOUSE LOOK CONTROLS///////////
         mouseSensitivityX = inputManager.mouseSensitivityX;
@@ -58,18 +58,15 @@ public class PlayerZeroGravityState : PlayerBaseState
         Vector2 movement = inputManager.GetZeroGMovement();
         float forwardThrust = movement.y * thrust;
         float lateralThrust = movement.x * thrust;
-
         float verticalThrust = inputManager.GetZeroGUpDown();
-
         float roll = inputManager.GetZeroGRoll();
-
+        
         playerCameraTransform = playerCamera.transform;
 
         rb.AddForce(playerCameraTransform.forward * forwardThrust , ForceMode.Acceleration);
         rb.AddForce(playerCameraTransform.right * lateralThrust, ForceMode.Acceleration);
         rb.AddForce(playerCameraTransform.up * verticalThrust , ForceMode.Acceleration);
         rb.AddTorque(playerCameraTransform.forward * roll , ForceMode.Acceleration);
-
 
         ///////////MOUSE LOOK CONTROLS///////////
         mousePosition = inputManager.GetPlayerLook();
@@ -80,26 +77,22 @@ public class PlayerZeroGravityState : PlayerBaseState
         player.transform.Rotate(playerUp, mousePosition.x * mouseSensitivityX * Time.deltaTime);
         player.transform.Rotate(playerRight, -mousePosition.y * mouseSensitivityY * Time.deltaTime);
 
-        /*
-        xRotation -= mousePosition.y * mouseSensitivityY;
-        xRotation = Mathf.Clamp(xRotation, -verticalClamp, verticalClamp);
-        Vector3 targetRotation = playerCameraTransform.eulerAngles;
-        targetRotation.x = xRotation;
-        playerCameraTransform.eulerAngles = targetRotation;
-        */
-
-
-
+        
         ///////////GRAVITY SWITCH////////////
         if (inputManager.GetGravity())
         {
             Sequence seq = DOTween.Sequence();
             seq.AppendCallback(() => _player.SwitchState(_player.gravityState));
             seq.AppendCallback(() => player.GetComponent<CharacterController>().enabled = true);
-            Debug.Log("GRAVITY ON");
+            //Debug.Log("GRAVITY ON");
         }
         
         
+    }
+
+    public override void FixedUpdateState(PlayerStateManager _player)
+    {
+        //Nothing to see here!
     }
 
     public override void OnTriggerEnter(PlayerStateManager _player, Collider _collider)
